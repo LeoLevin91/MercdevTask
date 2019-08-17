@@ -17,7 +17,7 @@ $(document).ready(function(){
             contentType: 'application/json',
             success: function(){
                 console.log("Yes");
-                window.location.href = 'account.html';
+                window.location.href = 'account1.html';
             },
             error: function(){
                 console.log("no");
