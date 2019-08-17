@@ -53,23 +53,26 @@ class Connected{
     }
 }
 
-var start = function () {
-    // Хранение ID элементов
+var start = (function () {
     var DOMstrings = {
         borderFieldEmail: 'email',
         borderFieldPassword: 'password',
         errorRect: 'Error'
     };
-    // Ожидание события клика
-    document.getElementById('submit').onclick = function () {
-        // Достает данные из полей
-        var email = document.getElementById(DOMstrings.borderFieldEmail).value;
-        var password = document.getElementById(DOMstrings.borderFieldPassword).value;
+    return {
+        go: function () {
+            // Ожидание события клика
+            document.getElementById('submit').onclick = function () {
+                // Достает данные из полей
+                var email = document.getElementById(DOMstrings.borderFieldEmail).value;
+                var password = document.getElementById(DOMstrings.borderFieldPassword).value;
 
-        // Создание объекта и отправка полей ему
-        var obj = new Connected(email, password, DOMstrings);
-        obj.controller();
+                // Создание объекта и отправка полей ему
+                var obj = new Connected(email, password, DOMstrings);
+                obj.controller();
+            }
+        }
     }
-}
+})();
 
-start();
+start.go();
