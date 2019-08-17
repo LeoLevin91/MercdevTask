@@ -42,7 +42,7 @@ body .account-main img {
 
 body .account-main .name-girl {
     opacity: 0.8;
-    font-family: Gotham;
+    font-family: Gotham, sans-serif;
     font-size: 28px;
     font-weight: bold;
     font-style: normal;
