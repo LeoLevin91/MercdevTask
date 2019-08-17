@@ -44,7 +44,7 @@ class Connected{
         req.send(params);
         req.onreadystatechange = function(){
             if(req.status == 200 && req.readyState == 4){
-                window.location.href = 'account1.html';
+                window.location.href = 'account.html';
             }
             else if(req.status != 200 && req.readyState != 4){
                 Connected.changeCSS()
